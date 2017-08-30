@@ -2,21 +2,19 @@
 
 ---
 
-本项目已经部署了自动化测试，你能在每个需要你完成的函数下面看到形如以下测试代码：
-`%run -i -e test.py LinearRegressionTestCase.test_...`
-Ctrl + Enter 运行即可。
+The project has already deployed automated tests, and you can see the following test code below each function that you need to complete:% run -i -e test.py LinearRegressionTestCase.test _... Ctrl Enter to run.
 
-如果你的实现有问题，会有断言错误`AssertionError`被抛出。
-请重新检查你的实现，并且修正bug，直到通过测试为止。
+If your implementation has a problem, there will be an assertion that the AssertionError is thrown. Please re-check your implementation and fix bugs until you pass the test.
 
-以下是一些带有特定反馈的断言错误说明：
-- AssertionError: Matrix A shouldn't be modified
-  + 你在实现augmentMatrix时修改了矩阵A
-- AssertionError: Matrix A is singular
-  + 你的gj_Solve实现在矩阵A是奇异矩阵时没有返回None
-- AssertionError: Matrix A is not singular
-  + 你的gj_Solve实现会在矩阵A不是奇异矩阵时返回None
-- AssertionError: x have to be two-dimensional Python List
-  + 你的gj_Solve返回的数据结构不正确，x必须是二维列表，而且是Nx1的列向量
-- AssertionError: Regression result isn't good enough
-  + 你的gj_Solve返回了计算结果，但是偏差过大
+Here are some assertions with specific feedback:
+
+    AssertionError: Matrix A should not be modified
+        You modified the matrix A when implementing augmentMatrix
+    AssertionError: Matrix A is singular
+        Your gj_Solve implementation does not return None when matrix A is a singular matrix
+    AssertionError: Matrix A is not singular
+        Your gj_Solve implementation returns None if Matrix A is not a singular matrix
+    AssertionError: x have to be two-dimensional Python List
+        Your gj_Solve returns the data structure is incorrect, x must be a two-dimensional list, and is the Nx1 column vector
+    AssertionError: Regression result is not good enough
+        Your gj_Solve returns the result of the calculation, but the deviation is too large
